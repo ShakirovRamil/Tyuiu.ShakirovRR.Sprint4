@@ -12,23 +12,18 @@ namespace Tyuiu.ShakirovRR.Sprint4.Task3.V10.Lib
     {
         public int Calculate(int[,] array)
         {
-
-            int max = 0;
-            for (int i = 0; i <= array.Length - 1; i++)
-
+            int m = 0;
+            for (int i = 0; i < array.GetLength(0); i++)
             {
-                if (i == 2)
+                for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    for (int j = 0; j <= array.Length - 1; j++)
+                    if ((i == 2) && (array[i, j] > m))
                     {
-                        if (array[i, j] > max)
-                        {
-                            max = array[i, j];
-                        }
+                        m = array[i, j];
                     }
                 }
             }
-            return max;
+            return m;
         }
     }
 }

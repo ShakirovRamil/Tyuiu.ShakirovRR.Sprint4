@@ -9,7 +9,7 @@ namespace Tyuiu.ShakirovRR.Sprint4.Task2.V8.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCalc()
         {
             DataService ds = new DataService();
 
